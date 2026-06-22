@@ -1,0 +1,34 @@
+# Data — never publish
+*.csv
+*.tsv
+*.json
+*.txt
+data/
+datasets/
+raw/
+
+# Model weights / checkpoints — too large + not for sharing
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+checkpoints/
+weights/
+
+# Notebooks output / runtime
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Secrets / credentials
+.env
+*.key
+wandb/
+
+# OS
+.DS_Store
+Thumbs.db
