@@ -3,7 +3,7 @@
 > Multi-class classification of objects in drone aerial footage, with a focus on the two decisions that actually move the metric: **leakage-aware data splitting** and **class-imbalance handling**.
 
 **Author:** Muhammad Jahanzaib Awan
-**Context:** MSc Artificial Intelligence — Applied AI module, De Montfort University (2026)
+**Context:** MSc Artificial Intelligence, Applied AI module, De Montfort University (2026)
 
 > ⚠️ **Portfolio repository.** Documents approach, methodology, and results of a graded academic project. Full solution code and datasets are intentionally **not** published. Available on request for recruiters.
 
@@ -22,7 +22,7 @@ From a VisDrone-style UAV video sequence (146 frames, 10,297 annotated object bo
 
 ## The two decisions that drove the result
 
-1. **Leakage-aware splitting.** Consecutive video frames contain near-identical crops of the *same* tracked object. A naïve random split leaks almost-duplicate images across train/test and **inflates accuracy**. I split by **track ID** (group split) so no object appears in both sets — then reported the naïve number too, to *quantify* the leakage effect.
+1. **Leakage-aware splitting.** Consecutive video frames contain near-identical crops of the *same* tracked object. A naïve random split leaks almost-duplicate images across train/test and **inflates accuracy**. I split by **track ID** (group split) so no object appears in both sets, then reported the naïve number too, to *quantify* the leakage effect.
 2. **Imbalance handling.** Weighted loss + class-balanced sampling + augmentation, evaluated with **macro-F1 and per-class metrics**, not raw accuracy.
 
 ## Models compared
